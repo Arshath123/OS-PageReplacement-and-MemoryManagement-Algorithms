@@ -14,7 +14,7 @@ void worst_fit(int m[],int n,int p[],int k){
 	for(i=0;i<k;i++){
 		maxi = -1,worst_index = -1;
 		for(j=0;j<n;j++){
-			if((me[j]-p[i] >= maxi) && (me[j]-p[i] >= 0)){
+			if((me[j]-p[i] > maxi) && (me[j]-p[i] >= 0)){
 				maxi = me[j]-p[i];
 				worst_index = j;
 			}
@@ -46,7 +46,7 @@ void best_fit(int m[],int n,int p[],int k){
 	for(i=0;i<k;i++){
 		mini = INT_MAX,best_index = -1;
 		for(j=0;j<n;j++){
-			if((me[j]-p[i] <= mini) && (me[j]-p[i] >= 0)){
+			if((me[j]-p[i] < mini) && (me[j]-p[i] >= 0)){
 				mini = me[j]-p[i];
 				best_index = j;
 			}
@@ -74,7 +74,7 @@ void first_fit(int m[],int n,int p[],int k){
 		aloc[i] = -1;
 	for(i=0;i<k;i++){
 		for(j=0;j<n;j++){
-			if(p[i] <= me[j]){
+			if(p[i] < me[j]){
 				aloc[i] = j+1;
 				me[j] -= p[i];
 				break;
