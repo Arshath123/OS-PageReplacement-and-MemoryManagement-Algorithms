@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<limits.h>
 int main(){
-	int n,*p,*f,m,i,j,k,max_pos = -1,page_fault=0,replace,s,counter = 0;
+	int n,*p,*f,m,i,j,k,min_pos,page_fault=0,replace,s,counter = 0;
 	
 	printf("\nEnter the number of pages\n");
 	scanf("%d",&n);
@@ -22,7 +22,7 @@ int main(){
 	
 	printf("\n...The Pages are...\n");
 	for(i=0;i<n;i++){
-		int flag = 0, max_pos = INT_MAX;
+		int flag = 0, min_pos = INT_MAX;
 		for(s=0;s<m;s++)
 		{
 			if(p[i] == f[s])
@@ -47,8 +47,8 @@ int main(){
 							break;			
 						}			
 					}
-					if(!found && k < max_pos){
-						max_pos = k;
+					if(!found && k < min_pos){
+						min_pos = k;
 						replace = j;
 					}
 					if(found){
