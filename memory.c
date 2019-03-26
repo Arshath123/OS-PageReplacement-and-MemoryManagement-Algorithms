@@ -29,7 +29,7 @@ void worst_fit(int m[],int n,int p[],int k){
 			printf("Process %d is un-allocated\n",i+1);
 		}
 		else{
-			printf("Process %d is allocated to %d th block\n",i+1,m[aloc[i]-1]);
+			printf("Process %d is allocated to %dKB\n",i+1,m[aloc[i]-1]);
 		}
 	}
 }
@@ -61,7 +61,7 @@ void best_fit(int m[],int n,int p[],int k){
 			printf("Process %d is un-allocated\n",i+1);
 		}
 		else{
-			printf("Process %d is allocated to %dkb\n",i+1,m[aloc[i]-1]);
+			printf("Process %d is allocated to %dKB\n",i+1,m[aloc[i]-1]);
 		}
 	}
 }
@@ -86,7 +86,7 @@ void first_fit(int m[],int n,int p[],int k){
 			printf("Process %d is un-allocated\n",i+1);
 		}
 		else{
-			printf("Process %d is allocated to %d th block\n",i+1,m[aloc[i]-1]);
+			printf("Process %d is allocated to %dKB\n",i+1,m[aloc[i]-1]);
 		}
 	}
 }
