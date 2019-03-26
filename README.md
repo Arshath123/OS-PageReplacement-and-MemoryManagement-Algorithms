@@ -1,2 +1,3 @@
 # OS-PageReplacementAlgorithms
-First In First Out, Optimal, Least Recently Used
+First In First Out, Optimal, Least Recently Used Page Replacement Algorithms
+First Fit, Best Fit, Worst Fit Memeory Management Algorithms
