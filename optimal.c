@@ -60,7 +60,7 @@ int main(){
 			}
 			
 		}
-		for(k=0;k<m;k++){
+		for(k=0;k<m && f[k] != -1;k++){
 			printf("%d ",f[k]);
 		}
 		printf("\nThe page fault is %d\n",page_fault);	
